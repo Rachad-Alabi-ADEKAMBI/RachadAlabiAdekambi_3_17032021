@@ -1,4 +1,145 @@
 $purple: #FB7BF0;
 $green: #99E2D0;
 $grey: #E5E5E5;
+$grey-light: #F2F2F2;
 
+
+html, body{
+box-sizing: border-box;
+display: block;
+text-align: center;
+}
+
+.container{
+
+    .header{
+        background-color: white;
+        text-align: center;
+        width: 100%;
+
+        img{
+            margin: auto;
+        }
+    }
+
+    .search-form{
+        display: inline;
+        background-color: $grey;
+        width: 100%;
+
+        &__icon{
+            i{
+                font-size: 10px;
+                margin: auto;
+            }
+        }
+
+        &__input{
+            color: $grey;
+        }
+    }
+
+    .presentation{
+        background-color: $grey-light;
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        &__title{
+            font-weight: bold;
+        }
+
+        &__text{
+            font-weight: 200;
+        }
+
+        &__btn{
+            background-color: $purple;
+            width: 150px;
+            height: 50px;
+            border-radius: 30px;
+            color: white;
+            margin: auto;
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .nav{
+       &__title{
+           font-weight: 400;
+           text-align: left;
+       }
+
+       &__list{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+
+           &__card{
+               display: table;
+               vertical-align: middle;
+               flex-direction: row;
+               justify-content: space-between;
+               list-style: none;
+               width: 300px;
+
+               &__number,
+               .fa-store,
+                &__text{
+                    display: table-cell;
+                    margin: auto;
+                }
+
+                i{
+                    margin: auto 0 auto 15px;
+                }
+           }
+       }
+    }
+
+    .figures{
+        display: block;
+
+        &__title{
+            text-align: left;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &__figure{
+               
+                display: block;
+                width: 250px;
+                height: 200px;
+                border-radius: 15px;
+                margin: auto;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+
+                    p{
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        background-color: $green;
+
+                    }
+
+                }
+            }
+        }
+    }
+}

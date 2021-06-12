@@ -1,1 +1,127 @@
-/* No CSS */
+html, body {
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.container .header {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.container .header img {
+  margin: auto;
+}
+
+.container .search-form {
+  display: inline;
+  background-color: #E5E5E5;
+  width: 100%;
+}
+
+.container .search-form__icon i {
+  font-size: 10px;
+  margin: auto;
+}
+
+.container .search-form__input {
+  color: #E5E5E5;
+}
+
+.container .presentation {
+  background-color: #F2F2F2;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.container .presentation__title {
+  font-weight: bold;
+}
+
+.container .presentation__text {
+  font-weight: 200;
+}
+
+.container .presentation__btn {
+  background-color: #FB7BF0;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  color: white;
+  margin: auto;
+}
+
+.container .presentation__btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.container .nav__title {
+  font-weight: 400;
+  text-align: left;
+}
+
+.container .nav__list {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+
+.container .nav__list__card {
+  display: table;
+  vertical-align: middle;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  width: 300px;
+}
+
+.container .nav__list__card__number,
+.container .nav__list__card .fa-store, .container .nav__list__card__text {
+  display: table-cell;
+  margin: auto;
+}
+
+.container .nav__list__card i {
+  margin: auto 0 auto 15px;
+}
+
+.container .figures {
+  display: block;
+}
+
+.container .figures__title {
+  text-align: left;
+}
+
+.container .figures .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container .figures .main__figure {
+  display: block;
+  width: 250px;
+  height: 200px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.container .figures .main__figure a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.container .figures .main__figure a p {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+}
