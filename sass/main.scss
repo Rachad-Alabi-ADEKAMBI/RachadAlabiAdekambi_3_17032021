@@ -243,24 +243,11 @@ font-family: 'Roboto', sans-serif;
         z-index: 99;
         text-align: center;
         
-        .menu{
+        .content{
             display: block;
-            width: 80%;
-            margin: auto;    
+            width: 800px;
+            margin: auto;  
             
-            &__entrance-title{
-                float: left;
-                font-size: 18px;
-                color: black;
-            }
-
-            &__entrance__title-line{
-                height: 5px;
-                width: 150px;
-                background-color: rgb(122, 199, 122);
-                margin: -10px auto;
-            }
-
             &__heading{
                 display: table;
                 width: 100% ;
@@ -282,94 +269,110 @@ font-family: 'Roboto', sans-serif;
                     margin: 40px auto auto auto;
                 }
             }
-                
-            &__card{
-                margin: 0 auto;
-                display: flex;
-                flex-direction: row;
-                border-radius: 15px;
-                margin: 15px auto;
-                height: 80px;
-                width: 100%;
-                justify-content: space-between;
-
-                &__details{
-                    background-color: white;
+            
+            .menu{
+                &__title{
+                    float: left;
+                    font-size: 18px;
+                    color: black;
+                }
+    
+                &__title-line{
+                    height: 5px;
+                    width: 150px;
+                    background-color: rgb(122, 199, 122);
+                    margin: -10px auto;
+                    border: 1px solid black;
+                }             
+                    
+                &__card{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 15px;
+                    margin: 15px auto;
                     height: 80px;
                     width: 100%;
-                    border-radius: 15px;
-                    display: grid;
-                    cursor: pointer;
-                    grid-template-columns: 1fr*2;
-                    grid-template-rows: 1fr*2;
-                    grid-template-areas: 
-                    "nom ."
-                    "supplements price";
-
-                    h3{
-                        grid-area: nom;
-                        text-align: left;
-                        margin: 10px auto auto 15px;
-                        font-weight: bold;
-                        font-size: 19px;
-                    }
-
-                    .supplements{
-                        grid-area: supplements;
-                        text-align: left;
-                        margin: 0px auto 15px 15px;
-                        font-weight: bold;
-                        font-size: 18px;
-                    }
-                    
-                    .price{
-                        grid-area: price;
-                        font-weight: bold;
-                        margin: auto 10px 20px auto;
-                        font-size: 17px;
-                    }
-                }              
-
-                .btn{
-                    width: 0;
-                    background-color: #99E2D0;
-                    border-radius: 5px;
-                    display: none;
-
-                    .fa-check-circle{
-                        font-size: 25px;
-                        margin: 25px auto;
+                    justify-content: space-between;
+    
+                    &__details{
+                        background-color: white;
+                        height: 80px;
+                        width: 100%;
+                        border-radius: 15px;
+                        display: grid;
+                        cursor: pointer;
+                        grid-template-columns: 1fr*2;
+                        grid-template-rows: 1fr*2;
+                        grid-template-areas: 
+                        "nom ."
+                        "supplements price";
+    
+                        h3{
+                            grid-area: nom;
+                            text-align: left;
+                            margin: 10px auto auto 15px;
+                            font-weight: bolder;
+                            font-size: 21px;
+                        }
+    
+                        .supplements{
+                            grid-area: supplements;
+                            text-align: left;
+                            margin: 0px auto 15px 15px;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        
+                        .price{
+                            grid-area: price;
+                            font-weight: bold;
+                            margin: auto 10px 20px auto;
+                            font-size: 17px;
+                        }
+                    }              
+    
+                    &__check-btn{
+                        width: 0;
+                        background-color: #99E2D0;
+                        border-radius: 5px;
                         display: none;
+    
+                        .fa-check-circle{
+                            font-size: 25px;
+                            margin: 25px auto;
+                            display: none;
+                        }
                     }
                 }
-            }
-
-            &__card:hover{
-                &__details{
-                    width: 95%;
-                }
-
-                .btn{
-                    width: 5%;
-                    display: block;
-                   
-                    .fa-check-circle{
+    
+                &__card:hover{
+                    &__details{
+                        width: 95%;
+                    }
+    
+                .menu__card__check-btn{
+                        width: 5%;
                         display: block;
+                        cursor: pointer;
+                       
+                        .fa-check-circle{
+                            display: block;
+                        }
                     }
                 }
-            }
 
-            &__btn{
-                height: 50px;
-                width: 200px;
-                font-size: 16px;
-                background-color: $purple;
-                color: white;
-                border-radius: 30px;
-                margin: 20px auto;
-                border: none;
-                font-weight: bold;
-            }
+                &__btn{
+                    height: 50px;
+                    width: 200px;
+                    font-size: 16px;
+                    background-color: $purple;
+                    color: white;
+                    border-radius: 30px;
+                    margin: 20px auto;
+                    border: none;
+                    font-weight: bold;
+                }
+            }    
         }
     }
 }
