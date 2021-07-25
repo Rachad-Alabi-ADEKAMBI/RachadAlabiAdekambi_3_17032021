@@ -1,11 +1,15 @@
+/*fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/*main colors*/    
 $purple: #FB7BF0;
 $green: #99E2D0;
+$violet: #9356DC;
 $grey: #E5E5E5;
 $grey-light: #F2F2F2;
 $black: #333333;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 html, body{
 box-sizing: border-box;
@@ -15,13 +19,14 @@ font-family: 'Roboto', sans-serif;
 }
 
 .container{
-    background-color: $grey;
+    background-color: white;
+    width: 100%;
+    margin: 0;
 
     .header{
         background-color: white;
         text-align: center;
         width: 100%;
-        margin: auto auto 0 auto;
 
         img{
             margin: auto;
@@ -48,6 +53,7 @@ font-family: 'Roboto', sans-serif;
             margin: 15px auto;
             background-color: $grey;
             font-weight: 700;
+            border: none;
             width: 100px;
         }
     }
@@ -61,22 +67,27 @@ font-family: 'Roboto', sans-serif;
         margin: 0 auto;
         padding-top: 5px;
 
-        &__title{
+        &__title{   
             font-weight: bold;
-            margin: 10px auto;
+            margin: 20px auto;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.5em;
         }
 
         &__text{
-            font-weight: 200;
-            margin: 50px auto;
+            font-size: 1em;
+            font-weight: 600;
+            margin: 30px auto;
         }
 
         &__btn{
-            background-color: $purple;
+            background: linear-gradient(360deg, #9356DC 0%, #FF79DA 100%);
+            box-shadow: 17px 17px 33px #cecece, -17px -17px 33px #ffffff;     
             width: 200px;
             height: 50px;
             border-radius: 30px;
             color: white;
+            border: none;
             margin: 20px auto;
             
             a{
@@ -84,16 +95,16 @@ font-family: 'Roboto', sans-serif;
                 text-decoration: none;
             }
         }
-
     }
 
     .nav{
         background-color: white;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
 
         &__title{
-           font-weight: bold;
+           font-weight: 800;
+           font-size: 1.2em;
            text-align: left;
            margin-left: 50px;
        }
@@ -101,55 +112,52 @@ font-family: 'Roboto', sans-serif;
        &__list{
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         flex-wrap: wrap;
-        width: 80%;
-        justify-content: space-between;
-        margin: 20px auto 20px auto;
+        margin: auto;
+        padding-bottom: 10px;
         background-color: white;
 
            &__card{
-               display: table;
+               display: flex;
                flex-direction: row;
                justify-content: space-between;
                list-style: none;
-               width: 300px;
-               margin: 10px auto;
+               background-color: $grey-light;
+               box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+               cursor: pointer;
                height: 50px;
                border-radius: 30px;
-               
+                        
+               &__number{
+                display: table-cell;
+                background-color: $violet;
+                border-radius: 100%;
+                color: white;
+                width: 25px;
+                height: 25px;
+                margin: auto;
+                text-align: center;
+               }
 
-               &__number,
-               i,
-                &__text{
-                    display: table-cell;
-                    margin: auto;
-                    vertical-align: middle;
-                }
-
-                &__number{
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 50px;
-                    background-color: $purple;
-                    color: white;
-                    margin-right: 50px;
-                    text-align: center;
-                }
-
-                i{
-                    margin: auto 30px;
-                }
+               i{
+                   margin: auto 5px ;
+               }
            }
        }
     }
-
+}
     .figures{
         display: block;
         background-color: $grey;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         &__title{
-            margin: 20px auto 20px auto;
-            font-weight: bold;          
+            font-weight: 800;
+           font-size: 1.2em;
+           text-align: left;
+           margin-left: 50px;          
         }
 
         .main{
@@ -158,21 +166,21 @@ font-family: 'Roboto', sans-serif;
             justify-content: space-between;
             flex-wrap: wrap;
             width: 100%;
+            padding-bottom: 30px;
 
-            &__figure{
-               
+            &__figure{         
                 display: block;
                 width: 250px;
                 height: 200px;
-                border-radius: 50px;
-                margin: auto;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                margin: 15px auto;
 
                 &__img{
                     text-decoration: none;
                     color: black;
                     position: relative;
-                    width: 300px;
-                    border-radius: 50px;
+                    object-fit: cover;
 
                     .new{
                         position: absolute;
@@ -181,12 +189,13 @@ font-family: 'Roboto', sans-serif;
                         background-color: $green;
                         height: 20px;
                         width: 100px;
-
                     }
 
                     img{
                         width: 100%;
                         height: 150px;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
                     }
 
                     .main__figure__infos{
@@ -208,23 +217,15 @@ font-family: 'Roboto', sans-serif;
 
                         p{
                             font-weight: 100;
-                            grid-area:food- description;
+                            grid-area:food-description;
                             margin: 0 auto auto 10px;
                         }
 
                         .icon{
                             margin: auto 5px;
-                            grid-area: food-icon;
-
-                            i{
-                                border: 2px black solid;
-                                color: white;
-                            }
+                            grid-area: food-icon;                            
                         }
                     }
-
-
-
                 }
             }
         }
@@ -233,27 +234,31 @@ font-family: 'Roboto', sans-serif;
     /*pages*/
     .image{
         width: 100%;
-        height: 250px;
+        height: 300px;
         border-radius: 15px;
-        z-index: 0;
+        
 
         img{
-            height: 250px;
+            object-fit: cover;
             width: 100%;
+            height: 250px;
         }
     }
 
     .restaurant{
         display: block;
         background-color: $grey-light;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        z-index: 99;
-        text-align: center;
-        
+        left: 0;
+        right: 0;
+        margin: -80px auto;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+        padding: 30px 40px 20px 20px;
+        z-index: 0;
+
         .content{
             display: block;
-            width: 800px;
+            width: 900px;
             margin: auto;  
             
             &__heading{
@@ -274,23 +279,26 @@ font-family: 'Roboto', sans-serif;
                     float: right;
                     display: table-cell;
                     font-size: 30px;
-                    margin: 40px auto auto auto;
+                    margin: 40px auto;
                 }
             }
             
-            .menu{
+            .menu{           
                 &__title{
                     float: left;
-                    font-size: 18px;
+                    font-size: 1em;
+                    font-weight: 400;
                     color: black;
+                    position: relative;
                 }
-    
                 &__title-line{
-                    height: 5px;
-                    width: 150px;
-                    background-color: rgb(122, 199, 122);
-                    margin: -10px auto;
-                    border: 1px solid black;
+                    border-style: solid;
+                    margin: 40px auto;
+                    background-color: $green;
+                    position: absolute;
+                    width: 100px;
+                    color: $green;
+                    height: 1px;            
                 }             
                     
                 &__card{
@@ -329,6 +337,7 @@ font-family: 'Roboto', sans-serif;
                             margin: 0px auto 15px 15px;
                             font-weight: bold;
                             font-size: 18px;
+                            font-weight:400;
                         }
                         
                         .price{
@@ -355,11 +364,11 @@ font-family: 'Roboto', sans-serif;
     
                 &__card:hover{
                     &__details{
-                        width: 95%;
+                        width: 90%;
                     }
     
                 .menu__card__check-btn{
-                        width: 5%;
+                        width: 60px;
                         display: block;
                         cursor: pointer;
                        
@@ -373,31 +382,31 @@ font-family: 'Roboto', sans-serif;
                     height: 50px;
                     width: 200px;
                     font-size: 16px;
-                    background-color: $purple;
+                    background: linear-gradient(360deg, $violet 0%, $purple 100%);
                     color: white;
                     border-radius: 30px;
-                    margin: 20px auto;
+                    margin: 20px auto 30px auto;
                     border: none;
                     font-weight: bold;
                 }
             }    
         }
     }
-}
+
     .footer{
         background-color: $black;
         display: block;
         margin: 50px auto 0 auto;
         text-align: center;
+        padding-top: 5px;
     
         &__home-link{
             text-decoration: none;
-            margin: auto;
-    
             h4{
                 color: white;
-                font-size: 30px;
-                margin: 20px auto;
+                font-size: 1em;
+                font-weight: lighter;
+                font-family: "Shrikhand", cursive;
             }
         }
     
@@ -420,12 +429,6 @@ font-family: 'Roboto', sans-serif;
     }
 
 
-/*responsive for 1280px*/
-@media screen and (min-width: 1280px) {
-   
-}
-
-
 /*responsive for 1024px*/
 @media screen and (min-width: 1024px) {
     .container{
@@ -434,22 +437,102 @@ font-family: 'Roboto', sans-serif;
         &__title{
             margin: auto;
         }
+
         .nav{
             text-align: center;
             margin: auto;
 
             &__list{
-                width: 100%;
+                width: auto;
 
+                &__card{
+                    margin: 10px 20px auto 20px;
+                    width: 250px;
+                }
                
             }
         }
 
         .figures{
-
             .main{
-                
+                justify-content: center;
+
+                &__figure{
+                    margin: 30px 20px auto 20px;
+                }
             }
         }
     }
+}
+
+/*responsive for 768px*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        .nav{
+            &__list{
+                display: block;
+                margin: auto;
+                text-align: center;
+                
+                &__card{
+                    width: 250  px;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        .figures{
+            .main{
+                flex-direction: column;
+
+                &__figure{
+                    margin: 20px auto;
+                }
+            }
+        } 
+
+        .restaurant{
+            .content{
+                width: 700px ;
+            }
+        }
+
+        .footer{
+            margin: 10px auto;
+        }
+    }
+}
+
+/*responsive for 350px*/
+@media screen and (min-width: 350px) and (max-width: 767px){
+  .container{
+      .nav{
+        &__list{
+            display: block;
+            margin: auto;
+            text-align: center;
+            
+            &__card{
+                width: 250px;
+                margin: 20px auto;
+            }
+        }
+      }
+      .restaurant{
+          .content{
+              width: 340px;
+          }
+      }
+  }
+
+  .figures{
+    .main{
+        flex-direction: column;
+
+        &__figure{
+            margin: 30px auto;
+        }
+    }
+} 
+
 }
