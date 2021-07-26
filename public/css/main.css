@@ -13,6 +13,14 @@ html, body {
   background-color: white;
   width: 100%;
   margin: 0;
+  /*header*/
+  /*search-form*/
+  /*presentation*/
+  /*nav*/
+  /*figures*/
+  /*pages*/
+  /*restaurant*/
+  /*footer*/
 }
 
 .container .header {
@@ -80,14 +88,20 @@ html, body {
   width: 200px;
   height: 50px;
   border-radius: 30px;
+  cursor: pointer;
   color: white;
   border: none;
   margin: 20px auto;
+  transition: 500ms;
 }
 
 .container .presentation__btn a {
   color: white;
   text-decoration: none;
+}
+
+.container .presentation__btn:hover {
+  transform: scale(1.1);
 }
 
 .container .nav {
@@ -123,6 +137,7 @@ html, body {
   cursor: pointer;
   height: 50px;
   border-radius: 30px;
+  transition: 500ms;
 }
 
 .container .nav__list__card__number {
@@ -140,21 +155,25 @@ html, body {
   margin: auto 5px;
 }
 
-.figures {
+.container .nav__list__card:hover {
+  transform: scale(1.1);
+}
+
+.container .figures {
   display: block;
   background-color: #E5E5E5;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.figures__title {
+.container .figures__title {
   font-weight: 800;
   font-size: 1.2em;
   text-align: left;
   margin-left: 50px;
 }
 
-.figures .main {
+.container .figures .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -163,39 +182,42 @@ html, body {
   padding-bottom: 30px;
 }
 
-.figures .main__figure {
+.container .figures .main__figure {
   display: block;
   width: 250px;
   height: 200px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   margin: 15px auto;
+  transition: 500ms;
 }
 
-.figures .main__figure__img {
+.container .figures .main__figure__img {
   text-decoration: none;
   color: black;
   position: relative;
   object-fit: cover;
 }
 
-.figures .main__figure__img .new {
+.container .figures .main__figure__img .new {
   position: absolute;
   top: -140px;
   right: 15px;
+  border-radius: 5px;
+  color: #2c9c81;
   background-color: #99E2D0;
   height: 20px;
   width: 100px;
 }
 
-.figures .main__figure__img img {
+.container .figures .main__figure__img img {
   width: 100%;
   height: 150px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-.figures .main__figure__img .main__figure__infos {
+.container .figures .main__figure__img .main__figure__infos {
   background-color: white;
   display: grid;
   height: 60px;
@@ -204,38 +226,57 @@ html, body {
   grid-template-rows: 1fr 1fr;
 }
 
-.figures .main__figure__img .main__figure__infos h3 {
+.container .figures .main__figure__img .main__figure__infos h3 {
   font-weight: bold;
   font-weight: 100;
   grid-area: food-name;
   margin: 0 auto 0 10px;
 }
 
-.figures .main__figure__img .main__figure__infos p {
+.container .figures .main__figure__img .main__figure__infos p {
   font-weight: 100;
   grid-area: food-description;
   margin: 0 auto auto 10px;
 }
 
-.figures .main__figure__img .main__figure__infos .icon {
+.container .figures .main__figure__img .main__figure__infos .icon {
   margin: auto 5px;
   grid-area: food-icon;
 }
 
-/*pages*/
-.image {
+.container .figures .main__figure__img .main__figure__infos .icon i {
+  display: none;
+}
+
+.container .figures .main__figure__img .main__figure__infos .icon i::before {
+  content: "\f004";
+}
+
+.container .figures .main__figure__img .main__figure__infos .icon:hover {
+  opacity: 0;
+}
+
+.container .figures .main__figure__img .main__figure__infos .icon:hover .fa-heart:before {
+  content: "\f004";
+}
+
+.container .figures .main__figure:hover {
+  transform: scale(1.15);
+}
+
+.container .image {
   width: 100%;
   height: 300px;
   border-radius: 15px;
 }
 
-.image img {
+.container .image img {
   object-fit: cover;
   width: 100%;
   height: 250px;
 }
 
-.restaurant {
+.container .restaurant {
   display: block;
   background-color: #F2F2F2;
   left: 0;
@@ -247,19 +288,19 @@ html, body {
   z-index: 0;
 }
 
-.restaurant .content {
+.container .restaurant .content {
   display: block;
   width: 900px;
   margin: auto;
 }
 
-.restaurant .content__heading {
+.container .restaurant .content__heading {
   display: table;
   width: 100%;
   height: 30px;
 }
 
-.restaurant .content__heading__title {
+.container .restaurant .content__heading__title {
   float: left;
   display: table-cell;
   vertical-align: middle;
@@ -268,14 +309,14 @@ html, body {
   margin: 30px auto auto 30px;
 }
 
-.restaurant .content__heading i {
+.container .restaurant .content__heading i {
   float: right;
   display: table-cell;
   font-size: 30px;
   margin: 40px auto;
 }
 
-.restaurant .content .menu__title {
+.container .restaurant .content .menu__title {
   float: left;
   font-size: 1em;
   font-weight: 400;
@@ -283,7 +324,7 @@ html, body {
   position: relative;
 }
 
-.restaurant .content .menu__title-line {
+.container .restaurant .content .menu__title-line {
   border-style: solid;
   margin: 40px auto;
   background-color: #99E2D0;
@@ -293,7 +334,7 @@ html, body {
   height: 1px;
 }
 
-.restaurant .content .menu__card {
+.container .restaurant .content .menu__card {
   display: flex;
   flex-direction: row;
   border-radius: 15px;
@@ -303,7 +344,7 @@ html, body {
   justify-content: space-between;
 }
 
-.restaurant .content .menu__card__details {
+.container .restaurant .content .menu__card__details {
   background-color: white;
   height: 80px;
   width: 100%;
@@ -315,7 +356,7 @@ html, body {
   grid-template-areas: "nom ." "supplements price";
 }
 
-.restaurant .content .menu__card__details h3 {
+.container .restaurant .content .menu__card__details h3 {
   grid-area: nom;
   text-align: left;
   margin: 10px auto auto 15px;
@@ -323,7 +364,7 @@ html, body {
   font-size: 21px;
 }
 
-.restaurant .content .menu__card__details .supplements {
+.container .restaurant .content .menu__card__details .supplements {
   grid-area: supplements;
   text-align: left;
   margin: 0px auto 15px 15px;
@@ -332,41 +373,42 @@ html, body {
   font-weight: 400;
 }
 
-.restaurant .content .menu__card__details .price {
+.container .restaurant .content .menu__card__details .price {
   grid-area: price;
   font-weight: bold;
   margin: auto 10px 20px auto;
   font-size: 17px;
 }
 
-.restaurant .content .menu__card__check-btn {
+.container .restaurant .content .menu__card__check-btn {
   width: 0;
   background-color: #99E2D0;
   border-radius: 5px;
   display: none;
+  text-align: center;
 }
 
-.restaurant .content .menu__card__check-btn .fa-check-circle {
+.container .restaurant .content .menu__card__check-btn .fa-check-circle {
   font-size: 25px;
   margin: 25px auto;
   display: none;
 }
 
-.restaurant .content .menu__card:hover__details {
+.container .restaurant .content .menu__card:hover__details {
   width: 90%;
 }
 
-.restaurant .content .menu__card:hover .menu__card__check-btn {
+.container .restaurant .content .menu__card:hover .menu__card__check-btn {
   width: 60px;
   display: block;
   cursor: pointer;
 }
 
-.restaurant .content .menu__card:hover .menu__card__check-btn .fa-check-circle {
+.container .restaurant .content .menu__card:hover .menu__card__check-btn .fa-check-circle {
   display: block;
 }
 
-.restaurant .content .menu__btn {
+.container .restaurant .content .menu__btn {
   height: 50px;
   width: 200px;
   font-size: 16px;
@@ -378,7 +420,7 @@ html, body {
   font-weight: bold;
 }
 
-.footer {
+.container .footer {
   background-color: #333333;
   display: block;
   margin: 50px auto 0 auto;
@@ -386,28 +428,28 @@ html, body {
   padding-top: 5px;
 }
 
-.footer__home-link {
+.container .footer__home-link {
   text-decoration: none;
 }
 
-.footer__home-link h4 {
+.container .footer__home-link h4 {
   color: white;
   font-size: 1em;
   font-weight: lighter;
   font-family: "Shrikhand", cursive;
 }
 
-.footer__links li {
+.container .footer__links li {
   display: block;
   margin: 5px auto;
   font-size: 16px;
 }
 
-.footer__links li i {
+.container .footer__links li i {
   color: white;
 }
 
-.footer__links li a {
+.container .footer__links li a {
   color: white;
   text-decoration: none;
 }

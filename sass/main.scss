@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+
 /*main colors*/    
 $purple: #FB7BF0;
 $green: #99E2D0;
@@ -23,6 +24,7 @@ font-family: 'Roboto', sans-serif;
     width: 100%;
     margin: 0;
 
+    /*header*/
     .header{
         background-color: white;
         text-align: center;
@@ -33,6 +35,7 @@ font-family: 'Roboto', sans-serif;
         }
     }
 
+    /*search-form*/
     .search-form{
         width: 100%;
         text-align: center;
@@ -55,9 +58,10 @@ font-family: 'Roboto', sans-serif;
             font-weight: 700;
             border: none;
             width: 100px;
-        }
+          }
     }
 
+    /*presentation*/
     .presentation{
         background-color: $grey-light;
         width: 100%;
@@ -86,17 +90,23 @@ font-family: 'Roboto', sans-serif;
             width: 200px;
             height: 50px;
             border-radius: 30px;
+            cursor: pointer;
             color: white;
             border: none;
             margin: 20px auto;
-            
+            transition: 500ms;          
             a{
                 color: white;
                 text-decoration: none;
             }
         }
+
+        &__btn:hover{
+            transform: scale(1.1);
+        }
     }
 
+    /*nav*/
     .nav{
         background-color: white;
         padding-top: 15px;
@@ -128,25 +138,31 @@ font-family: 'Roboto', sans-serif;
                cursor: pointer;
                height: 50px;
                border-radius: 30px;
+               transition: 500ms;
                         
                &__number{
-                display: table-cell;
-                background-color: $violet;
-                border-radius: 100%;
-                color: white;
-                width: 25px;
-                height: 25px;
-                margin: auto;
-                text-align: center;
+                    display: table-cell;
+                    background-color: $violet;
+                    border-radius: 100%;
+                    color: white;
+                    width: 25px;
+                    height: 25px;
+                    margin: auto;
+                    text-align: center;
                }
 
                i{
                    margin: auto 5px ;
                }
            }
+
+           &__card:hover{
+               transform: scale(1.1);
+           }
        }
-    }
-}
+    }   
+
+    /*figures*/
     .figures{
         display: block;
         background-color: $grey;
@@ -175,6 +191,7 @@ font-family: 'Roboto', sans-serif;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
                 margin: 15px auto;
+                transition: 500ms;
 
                 &__img{
                     text-decoration: none;
@@ -186,6 +203,8 @@ font-family: 'Roboto', sans-serif;
                         position: absolute;
                         top: -140px;
                         right: 15px;
+                        border-radius: 5px;
+                        color: #2c9c81;;
                         background-color: $green;
                         height: 20px;
                         width: 100px;
@@ -223,11 +242,30 @@ font-family: 'Roboto', sans-serif;
 
                         .icon{
                             margin: auto 5px;
-                            grid-area: food-icon;                            
+                            grid-area: food-icon;  
+                            
+                            i{
+                                display: none;
+                            }
+
+                            i::before{
+                                content: "\f004";
+                            }
+                        }
+
+                        .icon:hover{
+                            opacity: 0;
+
+                            .fa-heart:before {
+                                content: "\f004";
+                            }
                         }
                     }
                 }
             }
+
+            &__figure:hover{
+                transform: scale(1.15);            }
         }
     }
 
@@ -245,6 +283,7 @@ font-family: 'Roboto', sans-serif;
         }
     }
 
+    /*restaurant*/
     .restaurant{
         display: block;
         background-color: $grey-light;
@@ -353,6 +392,7 @@ font-family: 'Roboto', sans-serif;
                         background-color: #99E2D0;
                         border-radius: 5px;
                         display: none;
+                        text-align: center;
     
                         .fa-check-circle{
                             font-size: 25px;
@@ -371,6 +411,7 @@ font-family: 'Roboto', sans-serif;
                         width: 60px;
                         display: block;
                         cursor: pointer;
+                        
                        
                         .fa-check-circle{
                             display: block;
@@ -393,6 +434,7 @@ font-family: 'Roboto', sans-serif;
         }
     }
 
+    /*footer*/
     .footer{
         background-color: $black;
         display: block;
@@ -427,7 +469,7 @@ font-family: 'Roboto', sans-serif;
             }
         }
     }
-
+}
 
 /*responsive for 1024px*/
 @media screen and (min-width: 1024px) {
