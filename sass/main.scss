@@ -275,7 +275,6 @@ font-family: 'Roboto', sans-serif;
         height: 300px;
         border-radius: 15px;
         
-
         img{
             object-fit: cover;
             width: 100%;
@@ -348,7 +347,9 @@ font-family: 'Roboto', sans-serif;
                     height: 80px;
                     width: 100%;
                     justify-content: space-between;
-    
+                    transition: 500ms;
+                    animation: slide 500ms;
+
                     &__details{
                         background-color: white;
                         height: 80px;
@@ -393,12 +394,34 @@ font-family: 'Roboto', sans-serif;
                         border-radius: 5px;
                         display: none;
                         text-align: center;
+                        transition: 500ms;
     
                         .fa-check-circle{
                             font-size: 25px;
                             margin: 25px auto;
                             display: none;
+                            transition: 1000ms;
                         }
+                    }
+                }
+
+                @keyframes slide{
+                    0% { transform: scaleX(0);
+                     }
+                    25% {
+                        transform: scaleX(.25);
+
+                    }
+                    50% {
+                        transform: scaleX(.50);
+
+                    }
+                    75% {
+                        transform: scaleX(.75);
+
+                    }
+                    100%{
+                        transform: scaleX(1);
                     }
                 }
     
@@ -411,7 +434,7 @@ font-family: 'Roboto', sans-serif;
                         width: 60px;
                         display: block;
                         cursor: pointer;
-                        
+                        transition: 500ms;
                        
                         .fa-check-circle{
                             display: block;
@@ -438,9 +461,10 @@ font-family: 'Roboto', sans-serif;
     .footer{
         background-color: $black;
         display: block;
-        margin: 50px auto 0 auto;
+        margin: 0 auto 0 auto;
         text-align: center;
         padding-top: 5px;
+        padding-bottom: 20px;
     
         &__home-link{
             text-decoration: none;
