@@ -1,2 +1,2 @@
 # RachadAlabiAdekambi_3_17032021
-third project of web development course, Open Classrooms
+projet numéro 3 du parcours de développeur web à Open Classrooms
