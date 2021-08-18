@@ -357,6 +357,7 @@ font-family: 'Roboto', sans-serif;
                         border-radius: 15px;
                         display: grid;
                         cursor: pointer;
+                        transition: 400ms ease-in-out;
                         grid-template-columns: 1fr*2;
                         grid-template-rows: 1fr*2;
                         grid-template-areas: 
@@ -394,7 +395,7 @@ font-family: 'Roboto', sans-serif;
                         border-radius: 5px;
                         display: none;
                         text-align: center;
-                        transition: 500ms;
+                        transition: 500ms ease-in-out;
     
                         .fa-check-circle{
                             font-size: 25px;
@@ -428,19 +429,21 @@ font-family: 'Roboto', sans-serif;
                 &__card:hover{
                     &__details{
                         width: 90%;
+                        
                     }
     
-                .menu__card__check-btn{
-                        width: 60px;
-                        display: block;
-                        cursor: pointer;
-                        transition: 500ms;
-                       
-                        .fa-check-circle{
+                    .menu__card__check-btn{
+                            width: 60px;
                             display: block;
+                            cursor: pointer;
+                            
+                        
+                            .fa-check-circle{
+                                display: block;
+                                transition: 900ms ease-in-out;
+                            }
                         }
                     }
-                }
 
                 &__btn{
                     height: 50px;
@@ -449,7 +452,7 @@ font-family: 'Roboto', sans-serif;
                     background: linear-gradient(360deg, $violet 0%, $purple 100%);
                     color: white;
                     border-radius: 30px;
-                    margin: 20px auto 30px auto;
+                    margin: 20px auto 100px auto;
                     border: none;
                     font-weight: bold;
                 }

@@ -342,6 +342,8 @@ html, body {
   height: 80px;
   width: 100%;
   justify-content: space-between;
+  transition: 500ms;
+  animation: slide 500ms;
 }
 
 .container .restaurant .content .menu__card__details {
@@ -351,6 +353,7 @@ html, body {
   border-radius: 15px;
   display: grid;
   cursor: pointer;
+  transition: 400ms ease-in-out;
   grid-template-columns: 2fr;
   grid-template-rows: 2fr;
   grid-template-areas: "nom ." "supplements price";
@@ -386,12 +389,32 @@ html, body {
   border-radius: 5px;
   display: none;
   text-align: center;
+  transition: 500ms ease-in-out;
 }
 
 .container .restaurant .content .menu__card__check-btn .fa-check-circle {
   font-size: 25px;
   margin: 25px auto;
   display: none;
+  transition: 1000ms;
+}
+
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+  }
+  25% {
+    transform: scaleX(0.25);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  75% {
+    transform: scaleX(0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .container .restaurant .content .menu__card:hover__details {
@@ -406,6 +429,7 @@ html, body {
 
 .container .restaurant .content .menu__card:hover .menu__card__check-btn .fa-check-circle {
   display: block;
+  transition: 900ms ease-in-out;
 }
 
 .container .restaurant .content .menu__btn {
@@ -415,7 +439,7 @@ html, body {
   background: linear-gradient(360deg, #9356DC 0%, #FB7BF0 100%);
   color: white;
   border-radius: 30px;
-  margin: 20px auto 30px auto;
+  margin: 20px auto 100px auto;
   border: none;
   font-weight: bold;
 }
@@ -423,9 +447,10 @@ html, body {
 .container .footer {
   background-color: #333333;
   display: block;
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
   text-align: center;
   padding-top: 5px;
+  padding-bottom: 20px;
 }
 
 .container .footer__home-link {
